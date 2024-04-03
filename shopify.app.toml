@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "4d2b43d54a499e16386717c057d0f219"
+name = "fc-test-dev"
+handle = "fc-test-dev"
+application_url = "https://attack-gold-pediatric-labour.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "test-development-fc-app.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://attack-gold-pediatric-labour.trycloudflare.com/auth/callback",
+  "https://attack-gold-pediatric-labour.trycloudflare.com/auth/shopify/callback",
+  "https://attack-gold-pediatric-labour.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
